@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тестовое</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container my-2">
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="FIO" class="form-label">Введите ФИО:</label>
+            <input id="FIO" class="form-control" id="FIO" onkeyup="validate()"></input>
+          </div>
+          <p class="text-danger d-none">Неправильный формат ввода!</p>
+        </div>
+        <div id="formContainer" class="col d-none">
+          <form name="ValForm" id="ValForm">
+            <div class="mb-3">
+              <label for="Surname" class="form-label">Фамилия:</label>
+              <input class="form-control" id="Surname" disabled readonly></input>
+            </div>
+            <div class="mb-3">
+              <label for="Name" class="form-label">Имя:</label>
+              <input class="form-control" id="Name" disabled readonly></input>
+            </div>
+            <div class="mb-3">
+              <label for="SecondName" class="form-label">Отчество:</label>
+              <input class="form-control" id="SecondName" disabled readonly></input>
+            </div>
+          <button type="button" class="btn btn-outline-dark"  data-bs-toggle="modal" data-bs-target="#modalWin">Подтвердить</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalWin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Добро пожаловать, <span id="modalSurname"></span> <span id="modalName"></span> <span id="modalSecondName"></span>!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
